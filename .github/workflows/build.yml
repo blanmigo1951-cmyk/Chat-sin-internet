@@ -23,9 +23,6 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
 
-    - name: Generate Gradle Wrapper
-      run: gradle wrapper
-
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
@@ -33,7 +30,8 @@ jobs:
       run: ./gradlew assembleDebug --stacktrace
 
     - name: Upload APK Artifact
+      if: success()
       uses: actions/upload-artifact@v4
       with:
-        name: mesh-sos-app-debug
+        name: app-debug
         path: app/build/outputs/apk/debug/app-debug.apk
