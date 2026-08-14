@@ -1,0 +1,6 @@
+# Gradle wrapper bootstrapping script - initializes Gradle 8.5
+# This placeholder will be replaced with the actual wrapper JAR during the first run
+# or it can be downloaded from: https://services.gradle.org/distributions/gradle-8.5-bin.zip
+
+Bootstrapping Gradle Wrapper...
+Please run: gradle wrapper --gradle-version=8.5

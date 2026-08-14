@@ -60,6 +60,11 @@ else
     JAVA_CMD="$JAVA_HOME/bin/java"
 fi
 
+# This environment variable determines how we download Gradle
+if [ -z "$GRADLE_DOWNLOAD_URL" ] ; then
+    GRADLE_DOWNLOAD_URL="https://services.gradle.org/distributions/gradle-8.5-bin.zip"
+fi
+
 exec "$JAVA_CMD" \
   -Dorg.gradle.appname="$APP_BASE_NAME" \
   -classpath "$CLASSPATH" \
